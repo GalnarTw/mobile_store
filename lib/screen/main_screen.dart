@@ -35,16 +35,16 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: 
-      // BlocBuilder<MarketBloc, MarketState>(
+      // BlocProvider<MarketBloc, MarketState>(
       //   builder: (context, state) {
-      //     // List<PhoneMarketEntity> MarketPhone = [];
-      //     // if (state is MarketLoading) {
-      //     //   return Center(child: CircularProgressIndicator());
-      //     // } else if (state is MarketLoaded) {
-      //     //   MarketPhone = state.phoneMarket;
-      //     // }
+      //     List<PhoneMarketEntity> MarketPhone = [];
+      //     if (state is MarketLoading) {
+      //       return Center(child: CircularProgressIndicator());
+      //     } else if (state is MarketLoaded) {
+      //       MarketPhone = state.phoneMarket;
+      //     }
 
-      //     return 
+          // return 
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [

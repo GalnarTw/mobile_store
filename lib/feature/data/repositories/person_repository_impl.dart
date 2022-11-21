@@ -15,7 +15,7 @@ class MarketRepositoryImpl implements PhoneMarketRepository {
   
    final NetworkInfo networkInfo;
 
-  MarketRepositoryImpl(this.remoteDataSource, this.networkInfo);
+  MarketRepositoryImpl({required this.remoteDataSource,required this.networkInfo, });
 
 
 

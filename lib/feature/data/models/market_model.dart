@@ -19,6 +19,8 @@ part 'market_model.g.dart';
     this.second,
     this.three,
   });
+
+  static fromJson(decode) {}
 }
 
 @freezed

@@ -1,8 +1,9 @@
 
 // import 'dart:convert';
 
+// import '../models/market_model.dart';
 // import '/core/error/exception.dart';
-// import '/feature/data/models/person_model.dart';
+
 // import 'package:shared_preferences/shared_preferences.dart';
 
 // abstract class PersonLocalDataSource {
@@ -10,8 +11,8 @@
 //   /// the user had an internet connection.
 //   ///
 //   /// Throws [CacheException] if no cached data is present.
-//   Future<List<PersonModel>> getLastPersonsFromCache();
-//   Future<void> personsToCache(List<PersonModel> persons);
+//   Future<List<PhoneMarketModel>> getLastPersonsFromCache();
+//   Future<void> personsToCache(List<PhoneMarketModel> persons);
 // }
 
 // // ignore: constant_identifier_names
@@ -23,13 +24,13 @@
 //   PersonLocalDataSourceImpl({required this.sharedPreferences});
 
 //   @override
-//   Future<List<PersonModel>> getLastPersonsFromCache() {
+//   Future<List<PhoneMarketModel>> getLastPersonsFromCache() {
 //     final jsonPersonsList =
 //         sharedPreferences.getStringList(CACHED_PERSONS_LIST);
 //     if (jsonPersonsList!.isNotEmpty) {
 //       print('Get Persons from Cache: ${jsonPersonsList.length}');
 //       return Future.value(jsonPersonsList
-//           .map((person) => PersonModel.fromJson(json.decode(person)))
+//           .map((person) => PhoneMarketModel.fromJson(json.decode(person)))
 //           .toList());
 //     } else {
 //       throw CacheException();
@@ -37,7 +38,7 @@
 //   }
 
 //   @override
-//   Future<List<String>> personsToCache(List<PersonModel> persons) {
+//   Future<List<String>> personsToCache(List<PhoneMarketModel> persons) {
 //     final List<String> jsonPersonsList =
 //         persons.map((person) => json.encode(person.toJson())).toList();
 
