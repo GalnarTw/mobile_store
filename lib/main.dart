@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData.light().copyWith(
             backgroundColor: AppColors.mainBackground3,
           ),
-          home: const FirstScreen(),
+          home: const HomePage(),
           // routes: {
           //   '/': (context) => const FirstScreen(),
           //   '/second_screen': (context) => SecondScreen(),
