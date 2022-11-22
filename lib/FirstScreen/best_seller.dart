@@ -4,11 +4,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:mobile_store/FirstScreen/like.dart';
+import 'package:mobile_store/feature/presentation/wigets/%D1%81olors/my_colors.dart';
 
 Widget PhoneCell(
-  String ppCart,
-  int index,
-  
+  String pictures,
+  int price,
+  int disprice,
+  String title,
+
 ) =>
     Padding(
       padding: const EdgeInsets.all(7.0),
@@ -56,7 +59,7 @@ Widget PhoneCell(
                         image: DecorationImage(
                           image: NetworkImage(
 
-                            ppCart,
+                            pictures,
 
                           ),
                           fit: BoxFit.cover,
@@ -70,15 +73,15 @@ Widget PhoneCell(
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Text('ddd'),
+                      children:  [
+                        Text('\$$price',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 16,color: colorBlue,),),
                         SizedBox(
                           width: 20,
                         ),
-                        Text('asdaddd'),
+                        Text('\$$disprice',style: TextStyle(color: colorGreylight,decoration: TextDecoration.lineThrough),),
                       ],
                     ),
-                    Text('ddd'),
+                    Text(title,style: TextStyle(fontSize: 10,color: colorBlue,),),
                   ],
                 ),
               ],

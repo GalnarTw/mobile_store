@@ -5,8 +5,8 @@ import 'package:mobile_store/core/error/exception.dart';
 
 import '../../../core/error/failure.dart';
 import '../../../core/platform/network_info.dart';
-import '../../domain/entities/person_entity.dart';
-import '../../domain/repositories/person_repository.dart';
+import '../../domain/entities/market_entity.dart';
+import '../../domain/repositories/market_repository.dart';
 import '../datasources/person_remote_data_source.dart';
 import '../models/market_model.dart';
 
@@ -18,25 +18,6 @@ class MarketRepositoryImpl implements PhoneMarketRepository {
   MarketRepositoryImpl({required this.remoteDataSource,required this.networkInfo, });
 
 
-
-  // @override
-  // Future<Either<Failure, List<PhoneMarketEntity>>> searchBestSeller() async {
-  //   return await _getPersons(() {
-  //     return remoteDataSource.searchBestSeller();
-  //   });
-  // }
-
-  // @override
-  // Future<Either<Failure, List<PhoneMarketEntity>>> searchPhone() async {
-  //   return await _getPersons(() {
-  //     return remoteDataSource.searchPhone();
-  //   });
-  // }
-  
-
-  
-
-// Future<Either<Failure, List<PhoneMarketEntity>>> searchBestSeller() {
   @override
   Future<Either<Failure, List<BestSeller>>> searchBestSeller(
      ) async {
@@ -50,13 +31,7 @@ class MarketRepositoryImpl implements PhoneMarketRepository {
         return Left(ServerFailure());
       }
     } else {
-      // try {
-        // final localPerson = await localDataSource.getLastPersonsFromCache();
-        // return Right(localPerson);
-      // } on CacheException {
         return Left(CacheFailure());
-      // }
-      
     }
   }
   
@@ -67,22 +42,66 @@ class MarketRepositoryImpl implements PhoneMarketRepository {
       try {
         final remoteSearchHomeStore = 
         await remoteDataSource.searchHomeStore();
-        // localDataSource.personsToCache(remoteSearchBestSeller);
         return Right(remoteSearchHomeStore);
       } on ServerException {
         return Left(ServerFailure());
       }
     } else {
-      // try {
-        // final localPerson = await localDataSource.getLastPersonsFromCache();
-        // return Right(localPerson);
-      // } on CacheException {
         return Left(CacheFailure());
-      // }
-      
     }
   }
   
-    
+
+  @override
+  Future<Either<Failure, List<Basket>>> searchBasket(
+     ) async {
+    if (await networkInfo.isConnected) {
+      try {
+        final remoteSearchBasket = 
+        await remoteDataSource.searchBasket();
+        return Right(remoteSearchBasket);
+      } on ServerException {
+        return Left(ServerFailure());
+      }
+    } else {
+        return Left(CacheFailure());
+    }
+  }
+
+
+  @override
+  Future<Either<Failure, List<Second>>> searchSecond(
+     ) async {
+    if (await networkInfo.isConnected) {
+      try {
+        final remoteSearchSecond = 
+        await remoteDataSource.searchSecond();
+        return Right(remoteSearchSecond);
+      } on ServerException {
+        return Left(ServerFailure());
+      }
+    } else {
+        return Left(CacheFailure());
+    }
+  }
+
+  @override
+  Future<Either<Failure, List<Three>>> searchThree(
+     ) async {
+    if (await networkInfo.isConnected) {
+      try {
+        final remoteSearchThree = 
+        await remoteDataSource.searchThree();
+        return Right(remoteSearchThree);
+      } on ServerException {
+        return Left(ServerFailure());
+      }
+    } else {
+        return Left(CacheFailure());
+    }
+  }
+
+
   
 }
+

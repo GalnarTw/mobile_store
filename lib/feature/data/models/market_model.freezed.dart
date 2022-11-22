@@ -21,11 +21,11 @@ HomeStore _$HomeStoreFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$HomeStore {
   int get id => throw _privateConstructorUsedError;
-  bool get is_New => throw _privateConstructorUsedError;
+  bool get is_new => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get subtitle => throw _privateConstructorUsedError;
   String get picture => throw _privateConstructorUsedError;
-  bool get is_Buy => throw _privateConstructorUsedError;
+  bool get is_buy => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -40,11 +40,11 @@ abstract class $HomeStoreCopyWith<$Res> {
   @useResult
   $Res call(
       {int id,
-      bool is_New,
+      bool is_new,
       String title,
       String subtitle,
       String picture,
-      bool is_Buy});
+      bool is_buy});
 }
 
 /// @nodoc
@@ -61,20 +61,20 @@ class _$HomeStoreCopyWithImpl<$Res, $Val extends HomeStore>
   @override
   $Res call({
     Object? id = null,
-    Object? is_New = null,
+    Object? is_new = null,
     Object? title = null,
     Object? subtitle = null,
     Object? picture = null,
-    Object? is_Buy = null,
+    Object? is_buy = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      is_New: null == is_New
-          ? _value.is_New
-          : is_New // ignore: cast_nullable_to_non_nullable
+      is_new: null == is_new
+          ? _value.is_new
+          : is_new // ignore: cast_nullable_to_non_nullable
               as bool,
       title: null == title
           ? _value.title
@@ -88,9 +88,9 @@ class _$HomeStoreCopyWithImpl<$Res, $Val extends HomeStore>
           ? _value.picture
           : picture // ignore: cast_nullable_to_non_nullable
               as String,
-      is_Buy: null == is_Buy
-          ? _value.is_Buy
-          : is_Buy // ignore: cast_nullable_to_non_nullable
+      is_buy: null == is_buy
+          ? _value.is_buy
+          : is_buy // ignore: cast_nullable_to_non_nullable
               as bool,
     ) as $Val);
   }
@@ -105,11 +105,11 @@ abstract class _$$_HomeStoreCopyWith<$Res> implements $HomeStoreCopyWith<$Res> {
   @useResult
   $Res call(
       {int id,
-      bool is_New,
+      bool is_new,
       String title,
       String subtitle,
       String picture,
-      bool is_Buy});
+      bool is_buy});
 }
 
 /// @nodoc
@@ -124,20 +124,20 @@ class __$$_HomeStoreCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
-    Object? is_New = null,
+    Object? is_new = null,
     Object? title = null,
     Object? subtitle = null,
     Object? picture = null,
-    Object? is_Buy = null,
+    Object? is_buy = null,
   }) {
     return _then(_$_HomeStore(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      is_New: null == is_New
-          ? _value.is_New
-          : is_New // ignore: cast_nullable_to_non_nullable
+      is_new: null == is_new
+          ? _value.is_new
+          : is_new // ignore: cast_nullable_to_non_nullable
               as bool,
       title: null == title
           ? _value.title
@@ -151,9 +151,9 @@ class __$$_HomeStoreCopyWithImpl<$Res>
           ? _value.picture
           : picture // ignore: cast_nullable_to_non_nullable
               as String,
-      is_Buy: null == is_Buy
-          ? _value.is_Buy
-          : is_Buy // ignore: cast_nullable_to_non_nullable
+      is_buy: null == is_buy
+          ? _value.is_buy
+          : is_buy // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -164,11 +164,11 @@ class __$$_HomeStoreCopyWithImpl<$Res>
 class _$_HomeStore with DiagnosticableTreeMixin implements _HomeStore {
   const _$_HomeStore(
       {required this.id,
-      required this.is_New,
+      this.is_new = false,
       required this.title,
       required this.subtitle,
       required this.picture,
-      required this.is_Buy});
+      required this.is_buy});
 
   factory _$_HomeStore.fromJson(Map<String, dynamic> json) =>
       _$$_HomeStoreFromJson(json);
@@ -176,7 +176,8 @@ class _$_HomeStore with DiagnosticableTreeMixin implements _HomeStore {
   @override
   final int id;
   @override
-  final bool is_New;
+  @JsonKey()
+  final bool is_new;
   @override
   final String title;
   @override
@@ -184,11 +185,11 @@ class _$_HomeStore with DiagnosticableTreeMixin implements _HomeStore {
   @override
   final String picture;
   @override
-  final bool is_Buy;
+  final bool is_buy;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'HomeStore(id: $id, is_New: $is_New, title: $title, subtitle: $subtitle, picture: $picture, is_Buy: $is_Buy)';
+    return 'HomeStore(id: $id, is_new: $is_new, title: $title, subtitle: $subtitle, picture: $picture, is_buy: $is_buy)';
   }
 
   @override
@@ -197,11 +198,11 @@ class _$_HomeStore with DiagnosticableTreeMixin implements _HomeStore {
     properties
       ..add(DiagnosticsProperty('type', 'HomeStore'))
       ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('is_New', is_New))
+      ..add(DiagnosticsProperty('is_new', is_new))
       ..add(DiagnosticsProperty('title', title))
       ..add(DiagnosticsProperty('subtitle', subtitle))
       ..add(DiagnosticsProperty('picture', picture))
-      ..add(DiagnosticsProperty('is_Buy', is_Buy));
+      ..add(DiagnosticsProperty('is_buy', is_buy));
   }
 
   @override
@@ -210,18 +211,18 @@ class _$_HomeStore with DiagnosticableTreeMixin implements _HomeStore {
         (other.runtimeType == runtimeType &&
             other is _$_HomeStore &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.is_New, is_New) || other.is_New == is_New) &&
+            (identical(other.is_new, is_new) || other.is_new == is_new) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.subtitle, subtitle) ||
                 other.subtitle == subtitle) &&
             (identical(other.picture, picture) || other.picture == picture) &&
-            (identical(other.is_Buy, is_Buy) || other.is_Buy == is_Buy));
+            (identical(other.is_buy, is_buy) || other.is_buy == is_buy));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, id, is_New, title, subtitle, picture, is_Buy);
+      Object.hash(runtimeType, id, is_new, title, subtitle, picture, is_buy);
 
   @JsonKey(ignore: true)
   @override
@@ -240,11 +241,11 @@ class _$_HomeStore with DiagnosticableTreeMixin implements _HomeStore {
 abstract class _HomeStore implements HomeStore {
   const factory _HomeStore(
       {required final int id,
-      required final bool is_New,
+      final bool is_new,
       required final String title,
       required final String subtitle,
       required final String picture,
-      required final bool is_Buy}) = _$_HomeStore;
+      required final bool is_buy}) = _$_HomeStore;
 
   factory _HomeStore.fromJson(Map<String, dynamic> json) =
       _$_HomeStore.fromJson;
@@ -252,7 +253,7 @@ abstract class _HomeStore implements HomeStore {
   @override
   int get id;
   @override
-  bool get is_New;
+  bool get is_new;
   @override
   String get title;
   @override
@@ -260,7 +261,7 @@ abstract class _HomeStore implements HomeStore {
   @override
   String get picture;
   @override
-  bool get is_Buy;
+  bool get is_buy;
   @override
   @JsonKey(ignore: true)
   _$$_HomeStoreCopyWith<_$_HomeStore> get copyWith =>
@@ -274,10 +275,10 @@ BestSeller _$BestSellerFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$BestSeller {
   int get id => throw _privateConstructorUsedError;
-  bool get isFavorites => throw _privateConstructorUsedError;
+  bool get is_favorites => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
-  int get priceWithoutDiscount => throw _privateConstructorUsedError;
-  int get discountPrice => throw _privateConstructorUsedError;
+  int get price_without_discount => throw _privateConstructorUsedError;
+  int get discount_price => throw _privateConstructorUsedError;
   String get picture => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -294,10 +295,10 @@ abstract class $BestSellerCopyWith<$Res> {
   @useResult
   $Res call(
       {int id,
-      bool isFavorites,
+      bool is_favorites,
       String title,
-      int priceWithoutDiscount,
-      int discountPrice,
+      int price_without_discount,
+      int discount_price,
       String picture});
 }
 
@@ -315,10 +316,10 @@ class _$BestSellerCopyWithImpl<$Res, $Val extends BestSeller>
   @override
   $Res call({
     Object? id = null,
-    Object? isFavorites = null,
+    Object? is_favorites = null,
     Object? title = null,
-    Object? priceWithoutDiscount = null,
-    Object? discountPrice = null,
+    Object? price_without_discount = null,
+    Object? discount_price = null,
     Object? picture = null,
   }) {
     return _then(_value.copyWith(
@@ -326,21 +327,21 @@ class _$BestSellerCopyWithImpl<$Res, $Val extends BestSeller>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      isFavorites: null == isFavorites
-          ? _value.isFavorites
-          : isFavorites // ignore: cast_nullable_to_non_nullable
+      is_favorites: null == is_favorites
+          ? _value.is_favorites
+          : is_favorites // ignore: cast_nullable_to_non_nullable
               as bool,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      priceWithoutDiscount: null == priceWithoutDiscount
-          ? _value.priceWithoutDiscount
-          : priceWithoutDiscount // ignore: cast_nullable_to_non_nullable
+      price_without_discount: null == price_without_discount
+          ? _value.price_without_discount
+          : price_without_discount // ignore: cast_nullable_to_non_nullable
               as int,
-      discountPrice: null == discountPrice
-          ? _value.discountPrice
-          : discountPrice // ignore: cast_nullable_to_non_nullable
+      discount_price: null == discount_price
+          ? _value.discount_price
+          : discount_price // ignore: cast_nullable_to_non_nullable
               as int,
       picture: null == picture
           ? _value.picture
@@ -360,10 +361,10 @@ abstract class _$$_BestSellerCopyWith<$Res>
   @useResult
   $Res call(
       {int id,
-      bool isFavorites,
+      bool is_favorites,
       String title,
-      int priceWithoutDiscount,
-      int discountPrice,
+      int price_without_discount,
+      int discount_price,
       String picture});
 }
 
@@ -379,10 +380,10 @@ class __$$_BestSellerCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
-    Object? isFavorites = null,
+    Object? is_favorites = null,
     Object? title = null,
-    Object? priceWithoutDiscount = null,
-    Object? discountPrice = null,
+    Object? price_without_discount = null,
+    Object? discount_price = null,
     Object? picture = null,
   }) {
     return _then(_$_BestSeller(
@@ -390,21 +391,21 @@ class __$$_BestSellerCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      isFavorites: null == isFavorites
-          ? _value.isFavorites
-          : isFavorites // ignore: cast_nullable_to_non_nullable
+      is_favorites: null == is_favorites
+          ? _value.is_favorites
+          : is_favorites // ignore: cast_nullable_to_non_nullable
               as bool,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      priceWithoutDiscount: null == priceWithoutDiscount
-          ? _value.priceWithoutDiscount
-          : priceWithoutDiscount // ignore: cast_nullable_to_non_nullable
+      price_without_discount: null == price_without_discount
+          ? _value.price_without_discount
+          : price_without_discount // ignore: cast_nullable_to_non_nullable
               as int,
-      discountPrice: null == discountPrice
-          ? _value.discountPrice
-          : discountPrice // ignore: cast_nullable_to_non_nullable
+      discount_price: null == discount_price
+          ? _value.discount_price
+          : discount_price // ignore: cast_nullable_to_non_nullable
               as int,
       picture: null == picture
           ? _value.picture
@@ -419,10 +420,10 @@ class __$$_BestSellerCopyWithImpl<$Res>
 class _$_BestSeller with DiagnosticableTreeMixin implements _BestSeller {
   const _$_BestSeller(
       {required this.id,
-      required this.isFavorites,
+      required this.is_favorites,
       required this.title,
-      required this.priceWithoutDiscount,
-      required this.discountPrice,
+      required this.price_without_discount,
+      required this.discount_price,
       required this.picture});
 
   factory _$_BestSeller.fromJson(Map<String, dynamic> json) =>
@@ -431,19 +432,19 @@ class _$_BestSeller with DiagnosticableTreeMixin implements _BestSeller {
   @override
   final int id;
   @override
-  final bool isFavorites;
+  final bool is_favorites;
   @override
   final String title;
   @override
-  final int priceWithoutDiscount;
+  final int price_without_discount;
   @override
-  final int discountPrice;
+  final int discount_price;
   @override
   final String picture;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'BestSeller(id: $id, isFavorites: $isFavorites, title: $title, priceWithoutDiscount: $priceWithoutDiscount, discountPrice: $discountPrice, picture: $picture)';
+    return 'BestSeller(id: $id, is_favorites: $is_favorites, title: $title, price_without_discount: $price_without_discount, discount_price: $discount_price, picture: $picture)';
   }
 
   @override
@@ -452,10 +453,11 @@ class _$_BestSeller with DiagnosticableTreeMixin implements _BestSeller {
     properties
       ..add(DiagnosticsProperty('type', 'BestSeller'))
       ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('isFavorites', isFavorites))
+      ..add(DiagnosticsProperty('is_favorites', is_favorites))
       ..add(DiagnosticsProperty('title', title))
-      ..add(DiagnosticsProperty('priceWithoutDiscount', priceWithoutDiscount))
-      ..add(DiagnosticsProperty('discountPrice', discountPrice))
+      ..add(
+          DiagnosticsProperty('price_without_discount', price_without_discount))
+      ..add(DiagnosticsProperty('discount_price', discount_price))
       ..add(DiagnosticsProperty('picture', picture));
   }
 
@@ -465,20 +467,20 @@ class _$_BestSeller with DiagnosticableTreeMixin implements _BestSeller {
         (other.runtimeType == runtimeType &&
             other is _$_BestSeller &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.isFavorites, isFavorites) ||
-                other.isFavorites == isFavorites) &&
+            (identical(other.is_favorites, is_favorites) ||
+                other.is_favorites == is_favorites) &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.priceWithoutDiscount, priceWithoutDiscount) ||
-                other.priceWithoutDiscount == priceWithoutDiscount) &&
-            (identical(other.discountPrice, discountPrice) ||
-                other.discountPrice == discountPrice) &&
+            (identical(other.price_without_discount, price_without_discount) ||
+                other.price_without_discount == price_without_discount) &&
+            (identical(other.discount_price, discount_price) ||
+                other.discount_price == discount_price) &&
             (identical(other.picture, picture) || other.picture == picture));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, isFavorites, title,
-      priceWithoutDiscount, discountPrice, picture);
+  int get hashCode => Object.hash(runtimeType, id, is_favorites, title,
+      price_without_discount, discount_price, picture);
 
   @JsonKey(ignore: true)
   @override
@@ -497,10 +499,10 @@ class _$_BestSeller with DiagnosticableTreeMixin implements _BestSeller {
 abstract class _BestSeller implements BestSeller {
   const factory _BestSeller(
       {required final int id,
-      required final bool isFavorites,
+      required final bool is_favorites,
       required final String title,
-      required final int priceWithoutDiscount,
-      required final int discountPrice,
+      required final int price_without_discount,
+      required final int discount_price,
       required final String picture}) = _$_BestSeller;
 
   factory _BestSeller.fromJson(Map<String, dynamic> json) =
@@ -509,13 +511,13 @@ abstract class _BestSeller implements BestSeller {
   @override
   int get id;
   @override
-  bool get isFavorites;
+  bool get is_favorites;
   @override
   String get title;
   @override
-  int get priceWithoutDiscount;
+  int get price_without_discount;
   @override
-  int get discountPrice;
+  int get discount_price;
   @override
   String get picture;
   @override
@@ -530,7 +532,7 @@ Second _$SecondFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Second {
-  String get cPU => throw _privateConstructorUsedError;
+  String get CPU => throw _privateConstructorUsedError;
   String get camera => throw _privateConstructorUsedError;
   List<String> get capacity => throw _privateConstructorUsedError;
   List<String> get color => throw _privateConstructorUsedError;
@@ -554,7 +556,7 @@ abstract class $SecondCopyWith<$Res> {
       _$SecondCopyWithImpl<$Res, Second>;
   @useResult
   $Res call(
-      {String cPU,
+      {String CPU,
       String camera,
       List<String> capacity,
       List<String> color,
@@ -581,7 +583,7 @@ class _$SecondCopyWithImpl<$Res, $Val extends Second>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? cPU = null,
+    Object? CPU = null,
     Object? camera = null,
     Object? capacity = null,
     Object? color = null,
@@ -595,9 +597,9 @@ class _$SecondCopyWithImpl<$Res, $Val extends Second>
     Object? title = null,
   }) {
     return _then(_value.copyWith(
-      cPU: null == cPU
-          ? _value.cPU
-          : cPU // ignore: cast_nullable_to_non_nullable
+      CPU: null == CPU
+          ? _value.CPU
+          : CPU // ignore: cast_nullable_to_non_nullable
               as String,
       camera: null == camera
           ? _value.camera
@@ -654,7 +656,7 @@ abstract class _$$_SecondCopyWith<$Res> implements $SecondCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String cPU,
+      {String CPU,
       String camera,
       List<String> capacity,
       List<String> color,
@@ -678,7 +680,7 @@ class __$$_SecondCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? cPU = null,
+    Object? CPU = null,
     Object? camera = null,
     Object? capacity = null,
     Object? color = null,
@@ -692,9 +694,9 @@ class __$$_SecondCopyWithImpl<$Res>
     Object? title = null,
   }) {
     return _then(_$_Second(
-      cPU: null == cPU
-          ? _value.cPU
-          : cPU // ignore: cast_nullable_to_non_nullable
+      CPU: null == CPU
+          ? _value.CPU
+          : CPU // ignore: cast_nullable_to_non_nullable
               as String,
       camera: null == camera
           ? _value.camera
@@ -748,7 +750,7 @@ class __$$_SecondCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Second with DiagnosticableTreeMixin implements _Second {
   const _$_Second(
-      {required this.cPU,
+      {required this.CPU,
       required this.camera,
       required final List<String> capacity,
       required final List<String> color,
@@ -768,7 +770,7 @@ class _$_Second with DiagnosticableTreeMixin implements _Second {
       _$$_SecondFromJson(json);
 
   @override
-  final String cPU;
+  final String CPU;
   @override
   final String camera;
   final List<String> _capacity;
@@ -809,7 +811,7 @@ class _$_Second with DiagnosticableTreeMixin implements _Second {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Second(cPU: $cPU, camera: $camera, capacity: $capacity, color: $color, id: $id, images: $images, isFavorites: $isFavorites, price: $price, rating: $rating, sd: $sd, ssd: $ssd, title: $title)';
+    return 'Second(CPU: $CPU, camera: $camera, capacity: $capacity, color: $color, id: $id, images: $images, isFavorites: $isFavorites, price: $price, rating: $rating, sd: $sd, ssd: $ssd, title: $title)';
   }
 
   @override
@@ -817,7 +819,7 @@ class _$_Second with DiagnosticableTreeMixin implements _Second {
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'Second'))
-      ..add(DiagnosticsProperty('cPU', cPU))
+      ..add(DiagnosticsProperty('CPU', CPU))
       ..add(DiagnosticsProperty('camera', camera))
       ..add(DiagnosticsProperty('capacity', capacity))
       ..add(DiagnosticsProperty('color', color))
@@ -836,7 +838,7 @@ class _$_Second with DiagnosticableTreeMixin implements _Second {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Second &&
-            (identical(other.cPU, cPU) || other.cPU == cPU) &&
+            (identical(other.CPU, CPU) || other.CPU == CPU) &&
             (identical(other.camera, camera) || other.camera == camera) &&
             const DeepCollectionEquality().equals(other._capacity, _capacity) &&
             const DeepCollectionEquality().equals(other._color, _color) &&
@@ -855,7 +857,7 @@ class _$_Second with DiagnosticableTreeMixin implements _Second {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      cPU,
+      CPU,
       camera,
       const DeepCollectionEquality().hash(_capacity),
       const DeepCollectionEquality().hash(_color),
@@ -884,7 +886,7 @@ class _$_Second with DiagnosticableTreeMixin implements _Second {
 
 abstract class _Second implements Second {
   const factory _Second(
-      {required final String cPU,
+      {required final String CPU,
       required final String camera,
       required final List<String> capacity,
       required final List<String> color,
@@ -900,7 +902,7 @@ abstract class _Second implements Second {
   factory _Second.fromJson(Map<String, dynamic> json) = _$_Second.fromJson;
 
   @override
-  String get cPU;
+  String get CPU;
   @override
   String get camera;
   @override

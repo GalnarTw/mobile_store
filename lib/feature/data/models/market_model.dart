@@ -2,7 +2,7 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import '/feature/domain/entities/person_entity.dart';
+import '../../domain/entities/market_entity.dart';
 
 part 'market_model.freezed.dart';
 part 'market_model.g.dart';
@@ -27,11 +27,11 @@ part 'market_model.g.dart';
 class HomeStore  with _$HomeStore {
   const factory HomeStore(
       {required int id,
-      required bool is_New,
+      @Default(false) bool is_new,
       required String title,
       required String subtitle,
       required String picture,
-      required bool is_Buy}) = _HomeStore;
+      required bool is_buy}) = _HomeStore;
   factory HomeStore.fromJson(Map<String, dynamic> json) =>
       _$HomeStoreFromJson(json);
 }
@@ -40,11 +40,11 @@ class HomeStore  with _$HomeStore {
 class BestSeller  with _$BestSeller {
   const factory BestSeller(
       {required int id,
-      required bool isFavorites,
+      required bool is_favorites,
       required String title,
-      required int priceWithoutDiscount,
-      required int discountPrice,
-      required String picture}) = _BestSeller;
+      required int price_without_discount,
+      required int discount_price,
+      required String picture,}) = _BestSeller;
 
   factory BestSeller.fromJson(Map<String, dynamic> json) =>
       _$BestSellerFromJson(json);
@@ -53,7 +53,7 @@ class BestSeller  with _$BestSeller {
 @freezed
 class Second  with _$Second {
   const factory Second({
-    required String cPU,
+    required String CPU,
     required String camera,
     required List<String> capacity,
     required List<String> color,
