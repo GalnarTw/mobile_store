@@ -1,8 +1,8 @@
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mobile_store/feature/presentation/splash_screen/splash_screen.dart';
-import 'feature/presentation/cubit/market_cubit.dart';
+import 'package:mobile_store/features/first/presentation/page/splash_screen.dart';
+import 'cubit/market_cubit.dart';
 import 'locator_service.dart'  as di;
 import 'locator_service.dart';
 
