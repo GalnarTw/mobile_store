@@ -1,8 +1,8 @@
 // ignore_for_file: non_constant_identifier_names, prefer_const_constructors, sort_child_properties_last
 
 import 'package:flutter/material.dart';
-import 'package:mobile_store/feature/presentation/wigets/FirstScreen/like.dart';
-import 'package:mobile_store/feature/presentation/wigets/%D1%81olors/my_colors.dart';
+import 'package:mobile_store/feature/presentation/first_screen/widgets/like.dart';
+import 'package:mobile_store/feature/presentation/widgets/%D1%81olors/my_colors.dart';
 
 Widget PhoneCell(
   String pictures,

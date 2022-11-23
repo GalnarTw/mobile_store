@@ -1,13 +1,13 @@
 // ignore_for_file: unused_local_variable, non_constant_identifier_names, constant_identifier_names
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mobile_store/feature/domain/usecases/get_Second.dart';
-import 'package:mobile_store/feature/domain/usecases/get_three.dart';
+import 'package:mobile_store/feature/presentation/basket_screen/usecase/get_three.dart';
 import '../../../core/error/failure.dart';
 import '../../data/models/market_model.dart';
-import '../../domain/usecases/get_basket.dart';
-import '../../domain/usecases/get_best_sellers.dart';
-import '../../domain/usecases/get_home_store.dart';
+import '../basket_screen/usecase/get_basket.dart';
+import '../first_screen/usecases/get_best_sellers.dart';
+import '../first_screen/usecases/get_home_store.dart';
+import '../second_screen/usecases/get_second.dart';
 import 'market_cubit_state.dart';
 
 const SERVER_FAILURE_MESSAGE = 'Server Failure';

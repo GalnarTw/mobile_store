@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import '../../data/models/market_model.dart';
+import '../../../data/models/market_model.dart';
 import '/core/error/failure.dart';
 import '/core/usecases/usecase.dart';
-import '../repositories/market_repository.dart';
+import '../../../domain/repositories/market_repository.dart';
 
 class GetHomeStore extends Usecase<List<HomeStore>> {
   final PhoneMarketRepository phoneMarketRepository;

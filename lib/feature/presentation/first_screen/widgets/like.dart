@@ -1,7 +1,7 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
-import 'package:mobile_store/feature/presentation/wigets/%D1%81olors/my_colors.dart';
+import 'package:mobile_store/feature/presentation/widgets/%D1%81olors/my_colors.dart';
 
 class like extends StatefulWidget {
   const like({super.key});

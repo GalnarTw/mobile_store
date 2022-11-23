@@ -6,14 +6,14 @@ import 'package:carousel_slider/carousel_slider.dart';
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mobile_store/feature/presentation/wigets/Second_screen/down.dart';
-import 'package:mobile_store/feature/presentation/wigets/Second_screen/phone_cart.dart';
-import 'package:mobile_store/feature/presentation/pages/basket.dart';
-import 'package:mobile_store/feature/presentation/pages/main_screen.dart';
-import '../../data/models/market_model.dart';
-import '../cubit/market_cubit.dart';
-import '../cubit/market_cubit_state.dart';
-import '../wigets/сolors/my_colors.dart';
+import 'package:mobile_store/feature/presentation/second_screen/widgets/down.dart';
+import 'package:mobile_store/feature/presentation/second_screen/widgets/phone_cart.dart';
+import 'package:mobile_store/feature/presentation/basket_screen/page/basket.dart';
+import 'package:mobile_store/feature/presentation/first_screen/page/main_screen.dart';
+import '../../../data/models/market_model.dart';
+import '../../cubit/market_cubit.dart';
+import '../../cubit/market_cubit_state.dart';
+import '../../widgets/сolors/my_colors.dart';
 
 class PhonePage extends StatefulWidget {
   const PhonePage({Key? key}) : super(key: key);

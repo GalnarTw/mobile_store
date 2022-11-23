@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:mobile_store/feature/presentation/wigets/basket_screen/quantity.dart';
-import 'package:mobile_store/feature/presentation/wigets/%D1%81olors/my_colors.dart';
+import 'package:mobile_store/feature/presentation/basket_screen/widgets/quantity.dart';
+import 'package:mobile_store/feature/presentation/widgets/%D1%81olors/my_colors.dart';
 
 Widget basketBottom(
       String image, int total, String free,int price, String title,String images, int prices, String titles,

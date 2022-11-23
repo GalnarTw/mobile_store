@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_store/feature/presentation/wigets/%D1%81olors/my_colors.dart';
+import 'package:mobile_store/feature/presentation/widgets/%D1%81olors/my_colors.dart';
 
 
 Widget text(String text) {

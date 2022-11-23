@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mobile_store/feature/presentation/wigets/%D1%81olors/my_colors.dart';
+import 'package:mobile_store/feature/presentation/widgets/%D1%81olors/my_colors.dart';
 
-import 'main_screen.dart';
+import '../first_screen/page/main_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

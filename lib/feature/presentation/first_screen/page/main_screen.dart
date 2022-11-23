@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:mobile_store/feature/presentation/wigets/FirstScreen/hot_sales.dart';
+import 'package:mobile_store/feature/presentation/first_screen/widgets/hot_sales.dart';
 import 'package:mobile_store/feature/data/models/market_model.dart';
 import 'package:mobile_store/feature/presentation/cubit/market_cubit_state.dart';
-import 'package:mobile_store/feature/presentation/pages/phone_screen.dart';
-import '../wigets/FirstScreen/select_category.dart';
-import '../wigets/FirstScreen/best_seller.dart';
+import 'package:mobile_store/feature/presentation/second_screen/page/phone_screen.dart';
+import '../widgets/select_category.dart';
+import '../widgets/best_seller.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import '../cubit/market_cubit.dart';
-import '../wigets/сolors/my_colors.dart';
+import '../../cubit/market_cubit.dart';
+import '../../widgets/сolors/my_colors.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

@@ -4,10 +4,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:mobile_store/feature/presentation/wigets/Second_screen/bottom_color.dart';
-import 'package:mobile_store/feature/presentation/wigets/Second_screen/bottom_icon.dart';
-import 'package:mobile_store/feature/presentation/wigets/Second_screen/bottom_storage.dart';
-import 'package:mobile_store/feature/presentation/wigets/%D1%81olors/my_colors.dart';
+import 'package:mobile_store/feature/presentation/second_screen/widgets/bottom_color.dart';
+import 'package:mobile_store/feature/presentation/second_screen/widgets/bottom_icon.dart';
+import 'package:mobile_store/feature/presentation/second_screen/widgets/bottom_storage.dart';
+import 'package:mobile_store/feature/presentation/widgets/%D1%81olors/my_colors.dart';
 import 'stars.dart';
 import '../../../data/models/market_model.dart';
 import '../../cubit/market_cubit.dart';

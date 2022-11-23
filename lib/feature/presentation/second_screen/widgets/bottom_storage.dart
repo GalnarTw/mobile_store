@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../сolors/my_colors.dart';
+import '../../widgets/сolors/my_colors.dart';
 
 class Storage extends StatefulWidget {
   const Storage({super.key});
