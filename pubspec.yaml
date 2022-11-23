@@ -50,6 +50,8 @@ dependencies:
   cached_network_image: ^3.2.2
   get: ^4.6.5
   get_it: ^7.2.0
+  flutter_svg: ^1.1.6
+  
   
   
   
@@ -80,8 +82,10 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - lib/assets/pictures/main_page/
+    - lib/assets/pictures/second_page/
+    - lib/assets/pictures/end_page/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -103,7 +107,7 @@ flutter:
   #         style: italic
     - family: Mark Pro
       fonts:
-        - asset: lib/asset/Mark-Pro.ttf
+        - asset: lib/assets/Mark-Pro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

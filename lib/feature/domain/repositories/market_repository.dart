@@ -1,7 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:mobile_store/feature/data/models/market_model.dart';
 import '/core/error/failure.dart';
-import '../entities/market_entity.dart';
 
 abstract class PhoneMarketRepository {
  Future<Either<Failure, List<Basket>>> searchBasket();

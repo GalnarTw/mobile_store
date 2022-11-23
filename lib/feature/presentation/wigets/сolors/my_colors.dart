@@ -8,6 +8,6 @@ const colorWhite =Color.fromARGB(255, 255, 255, 255);
 const colorOrange =Color.fromARGB(255, 255, 110, 78);
 const colorStar =Color.fromARGB(255, 255, 183, 0);
 const colorBrown =Color.fromARGB(255, 119, 46, 3);
-const coloraaa =Color(0xFFB800);
-const coloraa =Color(0xFFB800);
+const colorIconGrey =Color.fromARGB(255, 183, 183, 183);
+const colorQuantity =Color.fromARGB(246, 40, 40, 67);
 

@@ -1,11 +1,7 @@
-
-
 import 'package:dartz/dartz.dart';
 import 'package:mobile_store/core/error/exception.dart';
-
 import '../../../core/error/failure.dart';
 import '../../../core/platform/network_info.dart';
-import '../../domain/entities/market_entity.dart';
 import '../../domain/repositories/market_repository.dart';
 import '../datasources/person_remote_data_source.dart';
 import '../models/market_model.dart';
@@ -25,7 +21,6 @@ class MarketRepositoryImpl implements PhoneMarketRepository {
       try {
         final remoteSearchBestSeller = 
         await remoteDataSource.searchBestSeller();
-        // localDataSource.personsToCache(remoteSearchBestSeller);
         return Right(remoteSearchBestSeller);
       } on ServerException {
         return Left(ServerFailure());

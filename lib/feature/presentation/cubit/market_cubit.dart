@@ -1,11 +1,10 @@
+// ignore_for_file: unused_local_variable, non_constant_identifier_names, constant_identifier_names
+
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:meta/meta.dart';
 import 'package:mobile_store/feature/domain/usecases/get_Second.dart';
 import 'package:mobile_store/feature/domain/usecases/get_three.dart';
-import 'package:mobile_store/feature/presentation/bloc/market_state.dart';
 import '../../../core/error/failure.dart';
 import '../../data/models/market_model.dart';
-import '../../domain/entities/market_entity.dart';
 import '../../domain/usecases/get_basket.dart';
 import '../../domain/usecases/get_best_sellers.dart';
 import '../../domain/usecases/get_home_store.dart';

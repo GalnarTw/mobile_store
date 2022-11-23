@@ -12,7 +12,6 @@ part 'market_model.g.dart';
   List<BestSeller>? bestSeller;
   List<Second>? second;
   List<Three>? three;
-  // List<Basket>? basket;
   PhoneMarketModel({
     this.homeStore,
     this.bestSeller,
@@ -74,7 +73,6 @@ class Second  with _$Second {
 class Three  with _$Three {
   const factory Three({
     required List<Basket> basket,
-//  required List<String> basket,
     required String delivery,
     required String id,
     required int total,

@@ -1,8 +1,3 @@
-// ignore_for_file: non_constant_identifier_names
-
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mobile_store/feature/data/models/market_model.dart';
-import 'package:flutter/material.dart';
 
 abstract class PhoneMarketEntity {
   List<HomeStoreEntity>? homeStoreEntity;
@@ -78,7 +73,6 @@ class SecondEntity extends PhoneMarketEntity {
 
 class ThreeEntity extends PhoneMarketEntity {
   final List<BasketEntity> basketEntity;
-//  required List<String> basket,
   final String delivery;
   final String id;
   final int total;
