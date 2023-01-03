@@ -54,7 +54,7 @@ Widget Iphone12(
                           decoration: const BoxDecoration(
                               shape: BoxShape.circle, color: colorOrange),
                         )
-                      : Container(width: 25,height: 25,),
+                      : const SizedBox(width: 25,height: 25,),
                   const SizedBox(
                     height: 0,
                     width: 0,
