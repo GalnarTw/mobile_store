@@ -6,20 +6,33 @@ import '../../domain/entities/market_entity.dart';
 part 'first_model.freezed.dart';
 part 'first_model.g.dart';
 
- class PhoneMarketModel extends PhoneMarketEntity {
+
+class PhoneMarketModelHome extends PhoneMarketEntity {
   List<HomeStore>? homeStore;
   List<BestSeller>? bestSeller;
-  PhoneMarketModel({
+  PhoneMarketModelHome({
     this.homeStore,
     this.bestSeller,
-    
   });
 
-  static fromJson(decode) {}
+  PhoneMarketModelHome.fromJson(Map<String, dynamic> json) {
+    if (json['home_store'] != null) {
+      homeStore = <HomeStore>[];
+      json['home_store'].forEach((v) {
+        homeStore!.add(HomeStore.fromJson(v));
+      });
+    }
+    if (json['best_seller'] != null) {
+      bestSeller = <BestSeller>[];
+      json['best_seller'].forEach((v) {
+        bestSeller!.add(BestSeller.fromJson(v));
+      });
+    }
+  }
 }
 
 @freezed
-class HomeStore  with _$HomeStore {
+class HomeStore with _$HomeStore {
   const factory HomeStore(
       {required int id,
       @Default(false) bool is_new,
@@ -32,16 +45,16 @@ class HomeStore  with _$HomeStore {
 }
 
 @freezed
-class BestSeller  with _$BestSeller {
-  const factory BestSeller(
-      {required int id,
-      required bool is_favorites,
-      required String title,
-      required int price_without_discount,
-      required int discount_price,
-      required String picture,}) = _BestSeller;
+class BestSeller with _$BestSeller {
+  const factory BestSeller({
+    required int id,
+    required bool is_favorites,
+    required String title,
+    required int price_without_discount,
+    required int discount_price,
+    required String picture,
+  }) = _BestSeller;
 
   factory BestSeller.fromJson(Map<String, dynamic> json) =>
       _$BestSellerFromJson(json);
 }
-

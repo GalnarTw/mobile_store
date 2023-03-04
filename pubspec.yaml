@@ -51,10 +51,19 @@ dependencies:
   get: ^4.6.5
   get_it: ^7.2.0
   flutter_svg: ^1.1.6
-  
-  
-  
-  
+  # карты
+  google_maps_flutter: ^2.2.1
+  geolocator: ^9.0.2
+  flutter_polyline_points: ^1.0.0
+  # язык
+  intl: ^0.17.0
+  flutter_localizations:
+    sdk: flutter
+  #ретрофит
+  dio: ^4.0.6
+  retrofit: ^3.3.1
+  retrofit_generator: ^4.2.0
+  pretty_dio_logger: ^1.2.0-beta-1
 
 dev_dependencies:
   flutter_test:
@@ -75,7 +84,7 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  generate: true
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

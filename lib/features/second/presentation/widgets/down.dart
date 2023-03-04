@@ -14,17 +14,17 @@ import 'package:mobile_store/features/second/presentation/widgets/bottom_storage
 import 'stars.dart';
 import 'botom_chapter.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 Widget down(int price) => Scaffold(
       body: BlocBuilder<MarketCubit, MarketCubitState>(
         builder: (context, state) {
-          
           List<Second> marketSecond = [];
           if (state is MarketLoading) {
             return Center(
               child: CircularProgressIndicator(),
             );
           } else if (state is MarketLoaded) {
-           
             marketSecond = state.SecondList;
           } else {}
           return Container(
@@ -83,7 +83,6 @@ Widget down(int price) => Scaffold(
                         color: Colors.white,
                       ),
                     ),
-                    
                   ],
                 ),
                 Row(
@@ -97,7 +96,7 @@ Widget down(int price) => Scaffold(
                 ),
                 Chapter(),
                 Padding(
-                  padding: const EdgeInsets.only(left:15,right: 10),
+                  padding: const EdgeInsets.only(left: 15, right: 10),
                   child: Row(
                     children: [
                       bottomIcon(
@@ -140,7 +139,7 @@ Widget down(int price) => Scaffold(
                     Padding(
                       padding: const EdgeInsets.only(left: 30, bottom: 10),
                       child: Text(
-                        'Select color and capacity',
+                        AppLocalizations.of(context)!.selectColor,
                         style: TextStyle(
                             color: colorBlue,
                             fontFamily: 'Mark Pro',
@@ -167,12 +166,11 @@ Widget down(int price) => Scaffold(
                             minimumSize: MaterialStateProperty.all(
                               const Size(355, 55),
                             ),
-                            backgroundColor: MaterialStateProperty.all(
-                                 colorOrange),
-                            foregroundColor: MaterialStateProperty.all(
-                                 colorBlue),
-                            overlayColor: MaterialStateProperty.all(
-                                colorGrey),
+                            backgroundColor:
+                                MaterialStateProperty.all(colorOrange),
+                            foregroundColor:
+                                MaterialStateProperty.all(colorBlue),
+                            overlayColor: MaterialStateProperty.all(colorGrey),
                             shape: MaterialStateProperty.all(
                               RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10)),
@@ -181,9 +179,23 @@ Widget down(int price) => Scaffold(
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Text('Add to Cart',style: TextStyle(fontSize: 20,color: colorWhite,fontFamily: 'Mark Pro',fontWeight: FontWeight.w700),),
+                              Text(
+                                AppLocalizations.of(context)!.addToCard,
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    color: colorWhite,
+                                    fontFamily: 'Mark Pro',
+                                    fontWeight: FontWeight.w700),
+                              ),
                               Padding(padding: EdgeInsets.only(left: 61)),
-                              Text('\$$price', style: TextStyle(fontSize: 20,color: colorWhite,fontFamily: 'Mark Pro',fontWeight: FontWeight.w700),),
+                              Text(
+                                '\$$price',
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    color: colorWhite,
+                                    fontFamily: 'Mark Pro',
+                                    fontWeight: FontWeight.w700),
+                              ),
                             ],
                           )),
                     )

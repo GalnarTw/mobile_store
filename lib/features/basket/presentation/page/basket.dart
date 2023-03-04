@@ -7,6 +7,8 @@ import 'package:mobile_store/features/basket/data/models/basket_model.dart';
 import 'package:mobile_store/features/second/presentation/page/phone_screen.dart';
 import '../widgets/basket.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 class BasketPage extends StatefulWidget {
   const BasketPage({super.key});
 
@@ -79,10 +81,10 @@ class _BasketPageState extends State<BasketPage> {
                                 color: Colors.white,
                               ),
                             ),
-                            const Padding(padding: EdgeInsets.fromLTRB(120, 0, 0, 0)),
-                            const Text(
-                              'Add address',
-                              style: TextStyle(
+                            const Padding(padding: EdgeInsets.fromLTRB(100, 0, 0, 0)),
+                             Text(
+                              AppLocalizations.of(context)!.address,
+                              style: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w700,
                                 color: colorBlue,
@@ -122,12 +124,12 @@ class _BasketPageState extends State<BasketPage> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           Padding(
-                            padding: EdgeInsets.fromLTRB(42, 0, 0, 0),
+                            padding: const EdgeInsets.fromLTRB(42, 0, 0, 0),
                             child: Text(
-                              'My Cart',
-                              style: TextStyle(
+                              AppLocalizations.of(context)!.myCart,
+                              style: const TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 30,
                                   color: colorBlue),
@@ -147,15 +149,16 @@ class _BasketPageState extends State<BasketPage> {
                               topRight: Radius.circular(25),
                             )),
                         child:
-                            basketBottom(
-                              marketBasket[0].images,
+                            basketBottom(context,
+                              // marketBasket[0].images,
+                              marketThree[0].basket[0].images,
                               marketThree[0].total,
                               marketThree[0].delivery,
-                              marketBasket[0].price,
-                              marketBasket[0].title,
-                              marketBasket[1].images,
-                              marketBasket[1].price,
-                              marketBasket[1].title,
+                              marketThree[0].basket[0].price,
+                              marketThree[0].basket[0].title,
+                              marketThree[0].basket[1].images,
+                              marketThree[0].basket[1].price,
+                              marketThree[0].basket[1].title,
                         ),
                       ),
                     ),

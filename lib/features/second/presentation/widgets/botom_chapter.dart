@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_store/assets/colors/my_colors.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 Widget text(String text) {
   return FittedBox(
@@ -39,9 +40,14 @@ class _ChapterState extends State<Chapter> {
           unselectedLabelColor: Colors.grey,
           labelColor: Colors.black,
           tabs: [
-            text('Shop'),
-            text('Details'),
-            text('Features'),
+            text(
+            AppLocalizations.of(context)!.bootShop,
+            ),
+            text(
+            AppLocalizations.of(context)!.bootDetails,
+            ),
+            text(
+            AppLocalizations.of(context)!.bootFeatures,),
           ],
         ),
       ),

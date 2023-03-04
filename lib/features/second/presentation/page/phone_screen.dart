@@ -13,7 +13,7 @@ import 'package:mobile_store/features/first/presentation/page/main_screen.dart';
 import 'package:mobile_store/features/second/data/models/second_model.dart';
 import 'package:mobile_store/features/second/presentation/widgets/down.dart';
 import 'package:mobile_store/features/second/presentation/widgets/phone_cart.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../../../cubit/market_cubit_state.dart';
 
 class PhonePage extends StatefulWidget {
@@ -50,7 +50,7 @@ class _PhonePageState extends State<PhonePage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Padding(padding: EdgeInsets.fromLTRB(33, 0, 0, 0)),
+                          Padding(padding: EdgeInsets.fromLTRB(13, 0, 0, 0)),
                           TextButton(
                             onPressed: () {
                               Navigator.push(
@@ -81,9 +81,9 @@ class _PhonePageState extends State<PhonePage> {
                               color: Colors.white,
                             ),
                           ),
-                          Padding(padding: EdgeInsets.fromLTRB(60, 0, 0, 0)),
+                          Padding(padding: EdgeInsets.fromLTRB(45, 0, 0, 0)),
                           Text(
-                            'Product Details',
+                            AppLocalizations.of(context)!.detail,
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w700,

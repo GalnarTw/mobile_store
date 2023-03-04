@@ -1,6 +1,8 @@
 
+import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
+import 'package:mobile_store/component/retrofit/retrofit_api.dart';
 //Repository
 import 'package:mobile_store/features/first/domain/repositories/first_repository.dart';
 import 'package:mobile_store/features/second/domain/repositories/second_repository.dart';
@@ -32,7 +34,7 @@ Future<void> init() async {
     () => MarketCubit(
       getBestSeller: sl(),
       getHomeStore: sl(),
-      getBasket: sl(),
+      // getBasket: sl(),
       getThree: sl(),
       getSecond: sl(),
       
@@ -41,7 +43,7 @@ Future<void> init() async {
   // UseCases
   sl.registerLazySingleton(() => GetHomeStore(sl()));
   sl.registerLazySingleton(() => GetBestSeller(sl()));
-sl.registerLazySingleton(() => GetBasket(sl()));
+// sl.registerLazySingleton(() => GetBasket(sl()));
 sl.registerLazySingleton(() => GetSecond(sl()));
 sl.registerLazySingleton(() => GetThree(sl()));
 
@@ -68,26 +70,28 @@ sl.registerLazySingleton<FirstRepository>(
 
   sl.registerLazySingleton<FirstRemoteDataSource>(
     () => FirstRemoteDataSourceImpl(
-      client: sl(),
+       retrofitApi: sl(),
     ),
   );
   
   sl.registerLazySingleton<SecondRemoteDataSource>(
     () => SecondRemoteDataSourceImpl(
-      client: sl(),
+      retrofitApi: sl(),
     ),
   );
 
   sl.registerLazySingleton<BasketRemoteDataSource>(
     () => BasketRemoteDataSourceImpl(
-      client: sl(),
+      retrofitApi: sl(),
     ),
   );
   // Core
+  sl.registerLazySingleton(() => RetrofitApi(sl()));
   sl.registerLazySingleton<NetworkInfo>(
     () => NetworkInfoImp(sl()),
   );
   
   sl.registerLazySingleton(() => http.Client());
+  sl.registerLazySingleton(() => Dio());
   sl.registerLazySingleton(() => InternetConnectionChecker());
 }

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'second_model.dart';
 
@@ -264,6 +264,7 @@ class _$_Second with DiagnosticableTreeMixin implements _Second {
   final List<String> _capacity;
   @override
   List<String> get capacity {
+    if (_capacity is EqualUnmodifiableListView) return _capacity;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_capacity);
   }
@@ -271,6 +272,7 @@ class _$_Second with DiagnosticableTreeMixin implements _Second {
   final List<String> _color;
   @override
   List<String> get color {
+    if (_color is EqualUnmodifiableListView) return _color;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_color);
   }
@@ -280,6 +282,7 @@ class _$_Second with DiagnosticableTreeMixin implements _Second {
   final List<String> _images;
   @override
   List<String> get images {
+    if (_images is EqualUnmodifiableListView) return _images;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_images);
   }

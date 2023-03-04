@@ -8,30 +8,25 @@ import '../models/second_model.dart';
 
 class SecondRepositoryImpl implements SecondRepository {
   final SecondRemoteDataSource remoteDataSource;
-  
-   final NetworkInfo networkInfo;
 
-  SecondRepositoryImpl({required this.remoteDataSource,required this.networkInfo, });
+  final NetworkInfo networkInfo;
 
-
-  
-
+  SecondRepositoryImpl({
+    required this.remoteDataSource,
+    required this.networkInfo,
+  });
 
   @override
-  Future<Either<Failure, List<Second>>> searchSecond(
-     ) async {
+  Future<Either<Failure, List<Second>>> searchSecond() async {
     if (await networkInfo.isConnected) {
       try {
-        final remoteSearchSecond = 
-        await remoteDataSource.searchSecond();
+        final remoteSearchSecond = await remoteDataSource.searchSecond();
         return Right(remoteSearchSecond);
       } on ServerException {
         return Left(ServerFailure());
       }
     } else {
-        return Left(CacheFailure());
+      return Left(CacheFailure());
     }
   }
-
 }
-

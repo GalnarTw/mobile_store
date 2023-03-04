@@ -17,7 +17,6 @@ part 'second_model.g.dart';
     
   });
 
-  static fromJson(decode) {}
 }
 
 @freezed
@@ -38,5 +37,6 @@ class Second  with _$Second {
   }) = _Second;
 
   factory Second.fromJson(Map<String, dynamic> json) => _$SecondFromJson(json);
+
 }
 

@@ -1,9 +1,12 @@
 // ignore_for_file: non_constant_identifier_names, sort_child_properties_last
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_store/assets/colors/my_colors.dart';
 
+
 Widget Iphone12(
+  BuildContext context,
   String pghhCart,
   int index,
   String NamePhone,
@@ -40,17 +43,17 @@ Widget Iphone12(
                   is_new
                       ? Container(
                           transformAlignment: Alignment.topLeft,
-                          child: const Text(
-                            'New',
-                            style: TextStyle(
+                          child:  Text(
+                            AppLocalizations.of(context)!.neew,
+                            style: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 11,
                                 fontWeight: FontWeight.w700),
                           ),
-                          width: 25,
+                          width: 45,
                           alignment: Alignment.center,
                           margin: const EdgeInsets.all(0),
-                          height: 25,
+                          height: 45,
                           decoration: const BoxDecoration(
                               shape: BoxShape.circle, color: colorOrange),
                         )
@@ -78,9 +81,10 @@ Widget Iphone12(
                   const Padding(padding: EdgeInsets.fromLTRB(10, 10, 10, 25)),
                   ElevatedButton(
                     onPressed: () {},
-                    child: const Text(
-                      'Buy now!',
-                      style: TextStyle(fontWeight: FontWeight.w700),
+                    child:  Text( 
+                      AppLocalizations.of(context)!.category,
+                      // AppLocalizations.of(context)!.buy,
+                      style: const TextStyle(fontWeight: FontWeight.w700),
                     ),
                     style: ButtonStyle(
                       minimumSize: MaterialStateProperty.all(

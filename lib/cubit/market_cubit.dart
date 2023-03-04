@@ -20,11 +20,11 @@ class MarketCubit extends Cubit<MarketCubitState> {
   final GetHomeStore getHomeStore;
   final GetThree getThree;
   final GetSecond getSecond;
-  final GetBasket getBasket;
+  // final GetBasket getBasket;
   MarketCubit({
     required this.getThree,
     required this.getSecond,
-    required this.getBasket,
+    // required this.getBasket,
     required this.getHomeStore,
     required this.getBestSeller,
   }) : super(MarketEmpty());
@@ -44,7 +44,7 @@ emit(MarketLoading());
     final failureOrMarketBest = await getBestSeller();
     final failureOrMarketSecond = await getSecond();
     final failureOrMarketThree = await getThree();
-    final failureOrMarketBasket = await getBasket();
+    // final failureOrMarketBasket = await getBasket();
 
 emit(MarketLoaded(HomePhone, BestPhone, SecondPhone, ThreePhone, BasketPhone,));
     failureOrMarketHome.fold(
@@ -65,10 +65,10 @@ failureOrMarketThree.fold(
       (character) => ThreePhone.addAll(character),
     );
 
-failureOrMarketBasket.fold(
-      (error) => emit(MarketError(message: _mapFailureToMessage(error))),
-      (character) => BasketPhone.addAll(character),
-    );
+// failureOrMarketBasket.fold(
+    //   (error) => emit(MarketError(message: _mapFailureToMessage(error))),
+    //   (character) => BasketPhone.addAll(character),
+    // );
 
     emit(MarketLoaded(HomePhone, BestPhone, SecondPhone, ThreePhone, BasketPhone,));
   }

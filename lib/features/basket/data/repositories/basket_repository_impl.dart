@@ -17,21 +17,21 @@ class BasketRepositoryImpl implements BasketRepository {
 
   
 
-  @override
-  Future<Either<Failure, List<Basket>>> searchBasket(
-     ) async {
-    if (await networkInfo.isConnected) {
-      try {
-        final remoteSearchBasket = 
-        await remoteDataSource.searchBasket();
-        return Right(remoteSearchBasket);
-      } on ServerException {
-        return Left(ServerFailure());
-      }
-    } else {
-        return Left(CacheFailure());
-    }
-  }
+  // @override
+  // Future<Either<Failure, List<Basket>>> searchBasket(
+  //    ) async {
+  //   if (await networkInfo.isConnected) {
+  //     try {
+  //       final remoteSearchBasket = 
+  //       await remoteDataSource.searchBasket();
+  //       return Right(remoteSearchBasket);
+  //     } on ServerException {
+  //       return Left(ServerFailure());
+  //     }
+  //   } else {
+  //       return Left(CacheFailure());
+  //   }
+  // }
 
 
   @override

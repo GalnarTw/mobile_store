@@ -1,0 +1,37 @@
+{
+  "location": "Zihuatanej Gro",
+  "category": "Select Category",
+  "view": "view all",
+  "search": "Search",
+  "sales": "Hot sales",
+  "see": "see more",
+  "seller": "Best Seller",
+
+  "explorer": "Explorer",
+  "shop": "Market",
+  "like": "Favorites",
+  "person": "User",
+
+  "neew": "New",
+  "buy": "Buy Now!",
+
+  "phones": "Phones",
+  "computer": "Computers",
+  "health": "Health",
+  "books": "Books",
+  "ok":"ok",
+
+  "detail": "Product Details",
+  "bootShop": "Shop",
+  "bootDetails": "Details",
+  "bootFeatures": "Features",
+  "selectColor": "Select color",
+  "addToCard": "addToCard",
+
+  "address": "Add address",
+  "myCart": "myCart",
+  "total": "total",
+  "delivery": "Delivery",
+  "free": "Free",
+  "checkout": "Checkout"
+}

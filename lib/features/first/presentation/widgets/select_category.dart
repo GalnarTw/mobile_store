@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mobile_store/assets/colors/my_colors.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class IconsCircle extends StatefulWidget {
   const IconsCircle({Key? key}) : super(key: key);
@@ -19,16 +20,17 @@ class _SelectCategoryState extends State<IconsCircle> {
     'lib/assets/pictures/main_page/heart.svg',
     'lib/assets/pictures/main_page/book.svg',
     'lib/assets/pictures/second_page/ok.svg',
+    
   ];
   int value = 0;
   @override
   Widget build(BuildContext context) {
     final text = [
-      'Phones',
-      'Computer',
-      'Hearth',
-      'Books',
-      'ok',
+      AppLocalizations.of(context)!.phones,
+      AppLocalizations.of(context)!.computer,
+      AppLocalizations.of(context)!.health,
+      AppLocalizations.of(context)!.books,
+      AppLocalizations.of(context)!.ok,
     ];
     return Column(
       children: [

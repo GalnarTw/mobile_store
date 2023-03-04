@@ -9,10 +9,12 @@ import 'package:mobile_store/cubit/market_cubit.dart';
 import 'package:mobile_store/cubit/market_cubit_state.dart';
 import 'package:mobile_store/features/first/data/models/first_model.dart';
 import 'package:mobile_store/features/first/presentation/widgets/hot_sales.dart';
+import 'package:mobile_store/component/map/map.dart';
 import 'package:mobile_store/features/second/presentation/page/phone_screen.dart';
 import '../widgets/select_category.dart';
 import '../widgets/best_seller.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -35,14 +37,21 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Padding(
-                padding: EdgeInsets.only(left: 100),
+                padding: EdgeInsets.only(left: 70),
                 child: Row(children: [
-                  Icon(
-                    Icons.location_on_outlined,
-                    color: colorOrange,
+                  IconButton(
+                    icon: Icon(Icons.location_on_outlined),
+                    color: colorOrange, onPressed: () { Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            MapScreen()
+                                          
+                                            ),
+                                  ); },
                   ),
                   Text(
-                    'Zihutanejo,Gro',
+                    AppLocalizations.of(context)!.location,
                     style: TextStyle(color: colorBlue),
                   ),
                   SvgPicture.asset(
@@ -51,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ])),
             Padding(
-              padding: const EdgeInsets.only(left: 50),
+              padding: const EdgeInsets.only(left: 40),
               child: IconButton(
                 onPressed: () {},
                 icon: SvgPicture.asset(
@@ -91,10 +100,11 @@ class _HomePageState extends State<HomePage> {
                       color: const Color.fromARGB(255, 236, 236, 236),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
+                        children:  [
                           Padding(
                             padding: EdgeInsets.fromLTRB(17, 0, 0, 0),
-                            child: Text('Select Category',
+                            child: Text(
+                              AppLocalizations.of(context)!.category,
                                 style: TextStyle(
                                   fontFamily: 'Mark Pro',
                                   fontSize: 25,
@@ -105,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                           Padding(
                             padding: EdgeInsets.fromLTRB(0, 0, 33, 0),
                             child: Text(
-                              'viev all',
+                              AppLocalizations.of(context)!.view,
                               style: TextStyle(color: colorOrange),
                             ),
                           ),
@@ -143,7 +153,7 @@ class _HomePageState extends State<HomePage> {
                                         borderRadius: BorderRadius.circular(25),
                                         borderSide: BorderSide.none,
                                         gapPadding: 23),
-                                    labelText: 'Serch',
+                                    labelText: AppLocalizations.of(context)!.search,
                                     icon: Icon(
                                       Icons.search,
                                       color: colorOrange,
@@ -185,7 +195,7 @@ class _HomePageState extends State<HomePage> {
                           Padding(
                             padding: const EdgeInsets.fromLTRB(17, 0, 0, 0),
                             child: Text(
-                              'Hot sales',
+                              AppLocalizations.of(context)!.sales,
                               style: TextStyle(
                                 fontFamily: 'Mark Pro',
                                 fontSize: 25,
@@ -195,9 +205,9 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 0, 33, 0),
+                            padding: const EdgeInsets.fromLTRB(0, 0, 25, 0),
                             child: Text(
-                              'see more',
+                              AppLocalizations.of(context)!.see,
                               style: TextStyle(color: colorOrange),
                             ),
                           ),
@@ -215,6 +225,7 @@ class _HomePageState extends State<HomePage> {
                           index,
                         ) {
                           return Iphone12(
+                            context,
                             marketHomeStore[index].picture,
                             index,
                             marketHomeStore[index].title,
@@ -233,16 +244,16 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               Padding(
                                   padding: EdgeInsets.fromLTRB(20, 0, 0, 0)),
-                              Text('Best Seller',
+                              Text(AppLocalizations.of(context)!.seller,
                                   style: TextStyle(
                                     fontSize: 25,
                                     fontWeight: FontWeight.w700,
                                     color: colorBlue,
                                   )),
                               Padding(
-                                  padding: EdgeInsets.fromLTRB(175, 0, 0, 0)),
+                                  padding: EdgeInsets.fromLTRB(140, 0, 0, 0)),
                               Text(
-                                'see more',
+                                AppLocalizations.of(context)!.see,
                                 style: TextStyle(
                                   color: Color.fromARGB(255, 201, 117, 43),
                                 ),
@@ -309,10 +320,10 @@ class _HomePageState extends State<HomePage> {
                                 );
                               },
                               child: PhoneCell(
-                                marketBestSeller[3].picture,
-                                marketBestSeller[3].price_without_discount,
-                                marketBestSeller[3].discount_price,
-                                marketBestSeller[3].title,
+                                marketBestSeller[1].picture,
+                                marketBestSeller[2].price_without_discount,
+                                marketBestSeller[2].discount_price,
+                                marketBestSeller[2].title,
                               ),
                             ),
                             TextButton(
@@ -327,9 +338,9 @@ class _HomePageState extends State<HomePage> {
                               },
                               child: PhoneCell(
                                 marketBestSeller[0].picture,
-                                marketBestSeller[0].price_without_discount,
-                                marketBestSeller[0].discount_price,
-                                marketBestSeller[0].title,
+                                marketBestSeller[3].price_without_discount,
+                                marketBestSeller[3].discount_price,
+                                marketBestSeller[3].title,
                               ),
                             ),
                           ]),
@@ -356,22 +367,22 @@ class _HomePageState extends State<HomePage> {
             tabs: [
               GButton(
                 icon: Icons.circle,
-                text: 'Explorer',
+                text: AppLocalizations.of(context)!.explorer,
                 iconSize: 15,
               ),
               GButton(
                 icon: Icons.shopping_bag_outlined,
-                text: 'Shop',
+                text: AppLocalizations.of(context)!.shop,
                 iconSize: 25,
               ),
               GButton(
                 icon: Icons.favorite_border_outlined,
-                text: 'like',
+                text: AppLocalizations.of(context)!.like,
                 iconSize: 25,
               ),
               GButton(
                 icon: Icons.person_outline,
-                text: 'Person',
+                text: AppLocalizations.of(context)!.person,
                 iconSize: 25,
               ),
             ],

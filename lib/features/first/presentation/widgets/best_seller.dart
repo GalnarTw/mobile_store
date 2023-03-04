@@ -30,8 +30,8 @@ Widget PhoneCell(
               borderRadius: BorderRadius.circular(15),
               color: Colors.white,
             ),
-            width: 190,
-            height: 230,
+            width: 178,
+            height: 220,
             child: Column(
               children: [
                 AspectRatio(
